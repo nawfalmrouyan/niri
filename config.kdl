@@ -160,6 +160,8 @@ window-rule {
 window-rule {
     match app-id=r#"^nvim-wl-anywhere$"#
     match app-id=r#"^btop$"#
+    match app-id=r#"^toipe$"#
+    match app-id=r#"^couik$"#
     open-floating true
     default-column-width { fixed 1280; }
     default-window-height { fixed 720; }
@@ -291,5 +293,4 @@ include "dms/binds.kdl"
 include "dms/cursor.kdl"
 include "dms/recentwindows.kdl"
 include "dms/wpblur.kdl"
-
 include "dms/outputs.kdl"

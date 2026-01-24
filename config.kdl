@@ -36,7 +36,7 @@ input {
 
 layout {
     gaps 9
-    empty-workspace-above-first
+    // empty-workspace-above-first
     background-color "transparent"
     center-focused-column "never"
     preset-column-widths {
@@ -89,9 +89,9 @@ overview {
     }
 }
 
-workspace "1"
-workspace "2"
-workspace "3"
+workspace "work"
+workspace "home"
+workspace "extra"
 workspace "whatsapp" {
     layout {
         always-center-single-column

@@ -98,17 +98,17 @@ binds {
     Mod+Ctrl+WheelScrollUp   { move-column-left; }
 
     // === Numbered Workspaces ===
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
+    Mod+1 { focus-workspace "work"; }
+    Mod+2 { focus-workspace "home"; }
+    Mod+3 { focus-workspace "extra"; }
     Mod+8 { focus-workspace "whatsapp"; }
     Mod+Backspace { focus-workspace "steam"; }
     Mod+Delete { focus-workspace "yt-music"; }
 
     // === Move to Numbered Workspaces ===
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+1 { move-column-to-workspace "work"; }
+    Mod+Ctrl+2 { move-column-to-workspace "home"; }
+    Mod+Ctrl+3 { move-column-to-workspace "extra"; }
 
     // === Column Management ===
     Mod+Shift+H  { consume-or-expel-window-left; }

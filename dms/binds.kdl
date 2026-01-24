@@ -27,8 +27,8 @@ binds {
     Mod+Escape allow-inhibiting=false repeat=false { spawn-sh "dms ipc call powermenu toggle"; }
     Mod+Shift+Escape { toggle-keyboard-shortcuts-inhibit; }
     Mod+E { toggle-column-tabbed-display; }
-    Mod+T hotkey-overlay-title="Open Terminal with TMUX stuff" { spawn-sh "kitty -1 -e sesh connect stuff"; }
-    Mod+Return { spawn-sh "kitty -1"; }
+    Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
+    Mod+T { spawn-sh "kitty -1 -e sesh connect stuff"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
     // Print { screenshot show-pointer=false; }
     // Shift+Print { screenshot-window show-pointer=false; }
@@ -44,16 +44,18 @@ binds {
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
+    Mod+S         { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
     Mod+Backslash { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
-    Mod+S { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
 
     // use nirius
     // https://sr.ht/~tsdh/nirius/
+    Mod+W { spawn-sh "nirius focus-or-spawn -a zen prime-run zen-browser"; }
     Mod+Z { spawn-sh "nirius focus-or-spawn -a \"Apache Directory Studio\" ApacheDirectoryStudio"; }
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
     Mod+M { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
+    Mod+Return { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }
@@ -140,7 +142,6 @@ binds {
     Mod+B       { toggle-windowed-fullscreen; }
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    Mod+W       { spawn "prime-run" "zen-browser"; }
 
     // === Manual Sizing ===
     Mod+Minus { set-column-width "-25%"; }

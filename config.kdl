@@ -40,7 +40,7 @@ layout {
     gaps 9
     // empty-workspace-above-first
     background-color "transparent"
-    center-focused-column "on-overflow"
+    center-focused-column "never"
     preset-column-widths {
         proportion 0.25
         proportion 0.5

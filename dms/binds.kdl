@@ -43,9 +43,9 @@ binds {
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
 
     // scratch apps
-    Mod+Backslash { spawn-sh "~/.local/bin/nscratch -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
-    Mod+Backspace { spawn-sh "~/.local/bin/nscratch -t Steam -s steam"; }
-    Mod+S { spawn-sh "~/.local/bin/nscratch -id scratch -s /home/opal/.local/bin/scratchterm"; }
+    Mod+Backslash { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
+    Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
+    Mod+S { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
 
     // use nirius
     Mod+Shift+A { spawn-sh "nirius focus-or-spawn -a \"Apache Directory Studio\" ApacheDirectoryStudio"; }

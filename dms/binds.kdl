@@ -26,13 +26,14 @@ binds {
     Alt+Print { screenshot-screen write-to-disk=false; }
     Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
-    Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }
+    // Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }
     Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
     Mod+T { spawn "~/.local/bin/toConsumeOrNot.sh"; }
     Mod+Space { spawn-sh "dms ipc call spotlight toggle"; }
     Mod+B repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e btop"; }
     Mod+Shift+N repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e nvtop"; }
+    Mod+Shift+Y { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e rmpc"; }
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad

@@ -107,7 +107,7 @@ binds {
     Mod+2 { focus-workspace "home"; }
     Mod+3 { focus-workspace "extra"; }
     // https://github.com/gvolpe/niri-scratchpad
-    Mod+Backslash { spawn-sh "~/.local/bin/nscratch -t WhatsApp -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
+    Mod+Backslash { spawn-sh "~/.local/bin/nscratch -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -t Steam -s steam"; }
 
     // === Move to Numbered Workspaces ===

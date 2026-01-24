@@ -259,6 +259,28 @@ layer-rule {
     block-out-from "screencast"
 }
 
+window-rule {
+    match app-id="^foot$"
+    match app-id="^scratch$"
+    match app-id="^com.mitchellh.ghostty$"
+    match title="^foot$"
+ 
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+// Enable blur behind the fuzzel launcher.
+layer-rule {
+    match namespace="^vicinae$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
 // Indicate screencasted windows with red colors.
 window-rule {
     match is-window-cast-target=true

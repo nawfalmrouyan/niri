@@ -233,6 +233,7 @@ window-rule {
     open-on-workspace "scratch"
     block-out-from "screencast"
     open-floating true
+    open-focused false
     default-column-width { fixed 1600; }
     default-window-height { fixed 960; }
 

@@ -32,11 +32,14 @@ binds {
     Mod+A { spawn "/opt/outlook-for-linux/outlook-for-linux" "%U"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
     // Print { spawn "quickshell" "-c" "HyprShot" "-n"; }
-    Print { screenshot show-pointer=false; }
-    Shift+Print { screenshot-window show-pointer=false; }
-    Ctrl+Print { screenshot-screen show-pointer=false; }
+    // Print { screenshot show-pointer=false; }
+    // Shift+Print { screenshot-window show-pointer=false; }
+    // Ctrl+Print { screenshot-screen show-pointer=false; }
+    Print { screenshot; }
+    Shift+Print { screenshot-window; }
+    Ctrl+Print { screenshot-screen; }
     Mod+Print { spawn-sh "quickshell -c HyprQuickSnip -n"; }
-    Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh"; }
+    Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
     // Mod+Y { spawn-sh "vicinae vicinae://extensions/vicinae/files/search"; }
     Mod+Y { spawn-sh "vicinae vicinae://extensions/tinkerbells/pass/pass"; }

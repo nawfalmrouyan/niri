@@ -50,7 +50,7 @@ binds {
 
     // use nirius
     // https://sr.ht/~tsdh/nirius/
-    Mod+Shift+A { spawn-sh "nirius focus-or-spawn -a \"Apache Directory Studio\" ApacheDirectoryStudio"; }
+    Mod+Z { spawn-sh "nirius focus-or-spawn -a \"Apache Directory Studio\" ApacheDirectoryStudio"; }
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
     Mod+M { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
@@ -131,13 +131,13 @@ binds {
     // === Sizing & Layout ===
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
-    Mod+Ctrl+F { maximize-column; }
-    Mod+C { center-column; }
-    Mod+Ctrl+C { center-visible-columns; }
+    Mod+Ctrl+R  { reset-window-height; }
+    Mod+Ctrl+F  { maximize-column; }
+    Mod+C       { center-column; }
+    Mod+Ctrl+C  { center-visible-columns; }
     Mod+F       { fullscreen-window; }
     Mod+Shift+F { maximize-window-to-edges; }
-    Mod+Z { toggle-windowed-fullscreen; }
+    Mod+B       { toggle-windowed-fullscreen; }
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W       { spawn "prime-run" "zen-browser"; }

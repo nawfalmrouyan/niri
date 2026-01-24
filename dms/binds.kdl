@@ -163,8 +163,9 @@ binds {
     Mod+Shift+M { spawn-sh "~/.local/bin/niri-sidebar toggle-visibility"; }
 
     // Flip the order of the sidebar
-    Mod+Ctrl+M { spawn-sh "~/.local/bin/niri-sidebar flip"; }
-
+    // Mod+Ctrl+M { spawn-sh "~/.local/bin/niri-sidebar flip"; }
     // Force reorder (useful if something gets misaligned manually)
     Mod+Alt+R { spawn-sh "~/.local/bin/niri-sidebar reorder"; }
+    Mod+Alt+M { spawn-sh "~/.local/bin/niri-sidebar focus next"; }
+    Mod+Ctrl+M { spawn-sh "~/.local/bin/niri-sidebar focus prev"; }
 }

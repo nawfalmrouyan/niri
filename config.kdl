@@ -114,6 +114,7 @@ environment {
 }
 
 spawn-at-startup "sudo" "setkeycodes" "e057" "240" "e058" "240"
+spawn-at-startup "niriusd"
 hotkey-overlay {
     skip-at-startup
 }
@@ -229,6 +230,8 @@ debug {
 // Override to disable super+tab
 window-rule {
     match app-id=r#"whatsappweb-nativefier-d40211|telegram"#
+    match app-id=r#"steam"#
+    match title=r#"Steam"#
     default-column-display "tabbed"
     open-on-workspace "scratch"
     block-out-from "screencast"
@@ -243,16 +246,6 @@ window-rule {
 layer-rule {
     match namespace="^dms.*"
     block-out-from "screencast"
-}
-
-window-rule {
-    match app-id=r#"steam"#
-    open-on-workspace "steam"
-}
-
-window-rule {
-    match app-id=r#"YouTube Music for Desktop"#
-    open-on-workspace "yt-music"
 }
 
 // Indicate screencasted windows with red colors.

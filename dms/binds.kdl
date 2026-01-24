@@ -29,30 +29,30 @@ binds {
     Mod+E { toggle-column-tabbed-display; }
     Mod+T hotkey-overlay-title="Open Terminal with TMUX stuff" { spawn-sh "kitty -1 -e sesh connect stuff"; }
     Mod+Return { spawn-sh "kitty -1"; }
-    Mod+A { spawn "/opt/outlook-for-linux/outlook-for-linux" "%U"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
-    // Print { spawn "quickshell" "-c" "HyprShot" "-n"; }
     // Print { screenshot show-pointer=false; }
     // Shift+Print { screenshot-window show-pointer=false; }
     // Ctrl+Print { screenshot-screen show-pointer=false; }
     Print { screenshot; }
     Shift+Print { screenshot-window; }
     Ctrl+Print { screenshot-screen; }
-    Mod+Print { spawn-sh "quickshell -c HyprQuickSnip -n"; }
     Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
-    // Mod+Y { spawn-sh "vicinae vicinae://extensions/vicinae/files/search"; }
     Mod+Y { spawn-sh "vicinae vicinae://extensions/tinkerbells/pass/pass"; }
     Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }
-    // Mod+E { spawn-sh "vicinae vicinae://extensions/vicinae/core/search-emojis"; }
     Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
 
     // scratch apps
     Mod+Backslash { spawn-sh "~/.local/bin/nscratch -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -t Steam -s steam"; }
-    Mod+M { spawn-sh "~/.local/bin/nscratch -id scratch -s /home/opal/.local/bin/scratchterm"; }
+    Mod+S { spawn-sh "~/.local/bin/nscratch -id scratch -s /home/opal/.local/bin/scratchterm"; }
 
+    // use nirius
+    Mod+Shift+A { spawn-sh "nirius focus-or-spawn -a \"Apache Directory Studio\" ApacheDirectoryStudio"; }
+    Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
+    Mod+M { spawn-sh "nirius toggle-mark"; }
+    Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }

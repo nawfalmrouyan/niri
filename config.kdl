@@ -236,7 +236,6 @@ window-rule {
     match app-id=r#"whatsappweb|telegram"#
     match app-id=r#"steam"#
     match title=r#"Steam"#
-    default-column-display "tabbed"
     open-on-workspace ""
     block-out-from "screencast"
     open-floating true

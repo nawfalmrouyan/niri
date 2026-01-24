@@ -10,7 +10,7 @@ binds {
     XF86AudioPrev allow-when-locked=true { spawn-sh "playerctl previous"; }
 
     // === Window Management ===
-    Mod+Y repeat=false { toggle-overview; }
+    Mod+Slash repeat=false { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Q repeat=false { close-window; }
     Mod+E { toggle-column-tabbed-display; }
@@ -18,7 +18,7 @@ binds {
 
     // Apps
     Mod+Escape allow-inhibiting=false repeat=false { spawn-sh "dms ipc call powermenu toggle"; }
-    Mod+Shift+W { spawn-sh "zen-browser"; }
+    Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
     Mod+Shift+G { spawn-sh "kitty -1 -e sesh connect stuff"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
     Print { spawn "~/.config/hypr/scripts/dms-screenshot"; }
@@ -31,7 +31,7 @@ binds {
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
-    Mod+S { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
+    Mod+U { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
     Mod+O { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
     Mod+B repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e btop"; }
@@ -44,8 +44,8 @@ binds {
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
     Mod+M { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
-    Mod+G { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
     Mod+R { spawn-sh "nirius focus-or-spawn -a teams-for-linux /opt/teams-for-linux/teams-for-linux"; }
+    Mod+G { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }
@@ -76,7 +76,7 @@ binds {
     // === Workspace Navigation ===
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
+    Mod+Y              { focus-workspace-down; }
     Mod+I              { focus-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
     Mod+Ctrl+I         { move-column-to-workspace-up; }
@@ -118,7 +118,7 @@ binds {
     // === Column Management ===
     Mod+Shift+H  { consume-or-expel-window-left; }
     Mod+Shift+L { consume-or-expel-window-right; }
-    Mod+Slash { expel-window-from-column; }
+    Mod+S { expel-window-from-column; }
 
     // === Sizing & Layout ===
     // Mod+R { switch-preset-column-width; }

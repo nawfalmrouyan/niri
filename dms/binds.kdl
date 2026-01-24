@@ -64,7 +64,8 @@ binds {
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
     Mod+Shift+R { spawn-sh "nirius focus-or-spawn -a teams-for-linux /opt/teams-for-linux/teams-for-linux"; }
     Mod+G { spawn-sh "nirius focus-or-spawn -a foot /home/opal/.local/bin/stuff"; }
-    Mod+R { spawn-sh "nirius focus-or-spawn -a kitty /home/opal/.local/bin/kitty-bookokrat"; }
+    Mod+R { spawn-sh "nirius focus-or-spawn -a bookokrat /home/opal/.local/bin/kitty-bookokrat"; }
+    Mod+Shift+O { spawn-sh "nirius focus-or-spawn -a oxicord /home/opal/.local/bin/kitty-oxicord"; }
     Mod+8 { spawn-sh "nirius focus-or-spawn -a toipe /home/opal/.local/bin/foot-toipe"; }
     Mod+Shift+8 { spawn-sh "nirius focus-or-spawn -a toipe /home/opal/.local/bin/rofi-foot-toipe"; }
 

@@ -54,13 +54,13 @@ binds {
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
     Mod+Delete { spawn-sh "~/.local/bin/nscratch -a -t 'YouTube Music for Desktop' -s youtube-music-for-desktop"; }
     Mod+7 repeat=false { spawn-sh "~/.local/bin/nscratch -a -id FortiClient -s /opt/forticlient/gui/FortiClient"; }
+    Mod+Shift+M { spawn-sh "~/.local/bin/nscratch -a -id btop -s /home/opal/.local/bin/foot-youtui-player"; }
 
     // use nirius
     // https://sr.ht/~tsdh/nirius/
     Mod+W { spawn-sh "nirius focus-or-spawn -a zen prime-run zen-browser"; }
     Mod+Z { spawn-sh "nirius focus-or-spawn -a \"Apache Directory Studio\" ApacheDirectoryStudio"; }
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
-    Mod+Shift+Apostrophe { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
     Mod+Shift+R { spawn-sh "nirius focus-or-spawn -a teams-for-linux /opt/teams-for-linux/teams-for-linux"; }
     Mod+G { spawn-sh "nirius focus-or-spawn -a foot /home/opal/.local/bin/stuff"; }
@@ -175,13 +175,13 @@ binds {
     // Mod+Delete repeat=false { clear-dynamic-cast-target; }
 
     // Toggle the focused window into/out of the sidebar
-    Mod+M { spawn-sh "~/.local/bin/niri-sidebar toggle-window"; }
+    // Mod+M { spawn-sh "~/.local/bin/niri-sidebar toggle-window"; }
     // Toggle sidebar visibility (hide/show)
     Mod+Shift+M { spawn-sh "~/.local/bin/niri-sidebar toggle-visibility"; }
     // Flip the order of the sidebar
     // Mod+Ctrl+M { spawn-sh "~/.local/bin/niri-sidebar flip"; }
     // Force reorder (useful if something gets misaligned manually)
-    Mod+Alt+R { spawn-sh "~/.local/bin/niri-sidebar reorder"; }
-    Mod+Alt+M { spawn-sh "~/.local/bin/niri-sidebar focus next"; }
-    Mod+Ctrl+M { spawn-sh "~/.local/bin/niri-sidebar focus prev"; }
+    // Mod+Alt+R { spawn-sh "~/.local/bin/niri-sidebar reorder"; }
+    // Mod+Alt+M { spawn-sh "~/.local/bin/niri-sidebar focus next"; }
+    // Mod+Ctrl+M { spawn-sh "~/.local/bin/niri-sidebar focus prev"; }
 }

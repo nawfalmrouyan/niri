@@ -1,19 +1,18 @@
 binds {
     // Audio
     XF86AudioRaiseVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "increment" "3";
+        spawn-sh "dms ipc call audio increment 3";
     }
     XF86AudioLowerVolume allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "decrement" "3";
+        spawn-sh "dms ipc call audio decrement 3";
     }
     XF86AudioMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "mute";
+        spawn-sh "dms ipc call audio mute";
     }
     XF86AudioMicMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "micmute";
+        spawn-sh "dms ipc call audio micmute";
     }
 
-    // BL
     XF86MonBrightnessUp allow-when-locked=true {
        spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
     }
@@ -25,21 +24,27 @@ binds {
     Mod+O repeat=false { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Q repeat=false { close-window; }
-    Mod+Escape repeat=false { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
-
+    Mod+Escape allow-inhibiting=false repeat=false { spawn-sh "dms ipc call powermenu toggle"; }
+    Mod+Shift+Escape { toggle-keyboard-shortcuts-inhibit; }
     Mod+E { toggle-column-tabbed-display; }
-
-    Mod+T hotkey-overlay-title="Open Terminal" { spawn "prime-run" "kitty" "-1"; }
-    Mod+Return { spawn "kitty" "-1" "-e" "sesh" "connect" "stuff"; }
-    Mod+M { spawn "kitty" "-1" "--class" "scratch" "-e" "sesh" "connect" "WORK"; }
+    Mod+T hotkey-overlay-title="Open Terminal" { spawn-sh "kitty -1"; }
+    Mod+Return { spawn-sh "kitty -1 -e sesh connect stuff"; }
+    // Mod+M { spawn-sh "kitty -1 --class scratch -e sesh connect WORK"; }
     Mod+A { spawn "/opt/outlook-for-linux/outlook-for-linux" "%U"; }
-    Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
+    Mod+M { spawn "kitten" "quick-access-terminal"; }
     // Print { spawn "quickshell" "-c" "HyprShot" "-n"; }
-    Print { screenshot; }
-    Shift+Print { screenshot-window; }
-    Ctrl+Print { screenshot-screen; }
-    Mod+Print { spawn "quickshell" "-c" "HyprQuickSnip" "-n"; }
+    Print { screenshot show-pointer=false; }
+    Shift+Print { screenshot-window show-pointer=false; }
+    Ctrl+Print { screenshot-screen show-pointer=false; }
+    Mod+Print { spawn-sh "quickshell -c HyprQuickSnip -n"; }
     Mod+N { spawn "/home/opal/.local/bin/nvim-hypr-anywhere.sh"; }
+    Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
+    Mod+Y { spawn-sh "vicinae vicinae://extensions/vicinae/files/search"; }
+    Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }
+    // Mod+E { spawn-sh "vicinae vicinae://extensions/vicinae/core/search-emojis"; }
+    Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
+    Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
+
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }
@@ -101,9 +106,9 @@ binds {
     Mod+1 { focus-workspace "work"; }
     Mod+2 { focus-workspace "home"; }
     Mod+3 { focus-workspace "extra"; }
-    Mod+8 { focus-workspace "whatsapp"; }
-    Mod+Backspace { focus-workspace "steam"; }
-    Mod+Delete { focus-workspace "yt-music"; }
+    // https://github.com/gvolpe/niri-scratchpad
+    Mod+Backslash { spawn-sh "~/.local/bin/nscratch -t WhatsApp -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
+    Mod+Backspace { spawn-sh "~/.local/bin/nscratch -t Steam -s steam"; }
 
     // === Move to Numbered Workspaces ===
     Mod+Ctrl+1 { move-column-to-workspace "work"; }

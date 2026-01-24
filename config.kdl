@@ -5,12 +5,12 @@ config-notification {
 output "eDP-1" {
     mode "1920x1080@60"
     position x=0 y=0
-    // variable-refresh-rate
 }
 
 gestures {
     hot-corners {
-        off
+        top-left
+        top-right
     }
 }
 
@@ -38,7 +38,7 @@ layout {
     gaps 9
     // empty-workspace-above-first
     background-color "transparent"
-    center-focused-column "never"
+    center-focused-column "on-overflow"
     preset-column-widths {
         proportion 0.25
         proportion 0.5
@@ -78,6 +78,11 @@ layout {
     }
 }
 
+workspace "work"
+workspace "home"
+workspace "extra"
+workspace "scratch"
+
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
@@ -87,67 +92,6 @@ overview {
     workspace-shadow {
         off
     }
-}
-
-workspace "work"
-workspace "home"
-workspace "extra"
-workspace "whatsapp" {
-    layout {
-        always-center-single-column
-        gaps 21
-
-        struts {
-            left 11
-            right 11
-            bottom 11
-            top 11
-        }
-
-        border {
-            on
-            width 2
-        }
-    }
-}
-
-workspace "yt-music" {
-    layout {
-        always-center-single-column
-        gaps 21
-
-        struts {
-            left 11
-            right 11
-            bottom 11
-            top 11
-        }
-
-        border {
-            on
-            width 4
-        }
-    }
-
-}
-workspace "steam" {
-    layout {
-        always-center-single-column
-        gaps 21
-
-        struts {
-            left 11
-            right 11
-            bottom 11
-            top 11
-        }
-
-        border {
-            on
-            width 4
-        }
-    }
-
 }
 
 environment {
@@ -161,12 +105,7 @@ environment {
     GAMEMODERUNEXEC "env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only"
 }
 
-// spawn-at-startup "dms" "run" "--session"
-spawn-at-startup "jamesdsp" "--tray"
-spawn-at-startup "vicinae" "server"
-spawn-at-startup "hypridle"
 spawn-at-startup "sudo" "setkeycodes" "e057" "240" "e058" "240"
-spawn-at-startup "kanata_cmd_allowed" "-c" "/home/opal/.config/hypr/kanata/lappy.kbd"
 hotkey-overlay {
     skip-at-startup
 }
@@ -207,35 +146,20 @@ animations {
 window-rule {
     match app-id=r#"nvim-hypr-anywhere"#
     open-floating true
-    min-width 1280
-    max-width 1280
-    min-height 700
-    max-height 700
-    default-floating-position x=9 y=9 relative-to="bottom"
+    default-column-width { fixed 1280; }
+    default-window-height { fixed 700; }
 }
 window-rule {
     match app-id=r#"scratch"#
     open-floating true
-    min-width 1280
-    max-width 1280
-    min-height 700
-    max-height 700
-    default-floating-position x=9 y=9 relative-to="bottom"
+    default-column-width { fixed 1280; }
+    default-window-height { fixed 700; }
+    default-floating-position x=9 y=9 relative-to="top"
 }
 window-rule {
     match title=r#"Peek Preview"#
     open-focused false
 }
-// window-rule {
-//     match title=r#"[Ff]ile Upload"#
-//     match title=r#"Enter name of file to save to.*"#
-//     match title=r#"blob.*"#
-//     match title=r#"Open [Ff]iles"#
-//     match title=r#"Open folder.*"#
-//     open-floating true
-//     max-width 1345
-//     max-height 750
-// }
 window-rule {
     geometry-corner-radius 5
     clip-to-geometry true
@@ -289,11 +213,14 @@ debug {
 
 // Override to disable super+tab
 window-rule {
-    match app-id=r#"whatsappweb-nativefier-d40211"#
-    match app-id=r#"telegram"#
-    open-on-workspace "whatsapp"
+    match app-id=r#"whatsappweb-nativefier-d40211|telegram"#
     default-column-display "tabbed"
+    open-on-workspace "scratch"
     block-out-from "screencast"
+    open-floating true
+    default-column-width { fixed 1600; }
+    default-window-height { fixed 960; }
+
 }
 
 // Block out mako notifications from screencasts.

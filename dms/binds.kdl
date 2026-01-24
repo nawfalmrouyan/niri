@@ -32,6 +32,7 @@ binds {
     Mod+O { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
     Mod+B repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e btop"; }
+    Mod+Shift+N repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e nvtop"; }
 
     // use nirius
     // https://sr.ht/~tsdh/nirius/
@@ -41,6 +42,7 @@ binds {
     Mod+M { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
     Mod+T { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
+    Mod+R { spawn-sh "nirius focus-or-spawn -a teams-for-linux /opt/teams-for-linux/teams-for-linux"; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }
@@ -116,8 +118,8 @@ binds {
     Mod+Slash { expel-window-from-column; }
 
     // === Sizing & Layout ===
-    Mod+R { switch-preset-column-width; }
-    Mod+Shift+R { switch-preset-window-height; }
+    // Mod+R { switch-preset-column-width; }
+    // Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R  { reset-window-height; }
     Mod+Ctrl+F  { maximize-column; }
     Mod+C       { center-column; }
@@ -131,8 +133,8 @@ binds {
     // === Manual Sizing ===
     Mod+Minus { set-column-width "-25%"; }
     Mod+Equal { set-column-width "+25%"; }
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Shift+Minus { set-window-height "-25%"; }
+    Mod+Shift+Equal { set-window-height "+25%"; }
 
     // === System Controls ===
     // Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }

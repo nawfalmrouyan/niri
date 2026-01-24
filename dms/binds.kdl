@@ -43,13 +43,14 @@ binds {
     Mod+Space { spawn-sh "dms ipc call spotlight toggle"; }
     Mod+B repeat=false { spawn-sh "footclient -a btop -e btop"; }
     Mod+Shift+N repeat=false { spawn-sh "footclient -a btop -e nvtop"; }
-    Mod+Shift+Y { spawn-sh "footclient -a btop -e rmpc"; }
+    Mod+Shift+Y { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e rmpc"; }
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
     Mod+S { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
     Mod+O { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
+    Mod+Delete { spawn-sh "~/.local/bin/nscratch -a -t 'YouTube Music for Desktop' -s youtube-music-for-desktop"; }
     Mod+7 repeat=false { spawn-sh "~/.local/bin/nscratch -a -id FortiClient -s /opt/forticlient/gui/FortiClient"; }
 
     // use nirius
@@ -165,9 +166,9 @@ binds {
     Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg outputs | grep '^Output' | cut -d'(' -f 2 | cut -d')' -f 1 | vicinae dmenu )"; }
 
     // Dynamic screencast
-    Mod+Shift+Print repeat=false { set-dynamic-cast-window; }
-    Mod+Ctrl+Print repeat=false { set-dynamic-cast-monitor; }
-    Mod+Delete repeat=false { clear-dynamic-cast-target; }
+    // Mod+Shift+Print repeat=false { set-dynamic-cast-window; }
+    // Mod+Ctrl+Print repeat=false { set-dynamic-cast-monitor; }
+    // Mod+Delete repeat=false { clear-dynamic-cast-target; }
 
     // Toggle the focused window into/out of the sidebar
     Mod+M { spawn-sh "~/.local/bin/niri-sidebar toggle-window"; }

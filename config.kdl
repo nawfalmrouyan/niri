@@ -245,7 +245,7 @@ debug {
 
 // Override to disable super+tab
 window-rule {
-    match app-id=r#"whatsappweb|telegram"#
+    match app-id=r#"whatsappweb|telegram|YouTube Music for Desktop"#
     match app-id=r#"steam"#
     match title=r#"Steam"#
     match app-id=r#""FortiClient"#

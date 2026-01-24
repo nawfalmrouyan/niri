@@ -153,8 +153,8 @@ window-rule {
 }
 window-rule {
     // Grim Dawn
-    match app-id=r#"^steam_app_219990$"#
-    match title=r#"^Grim Dawn$"#
+    match app-id="steam_app_219990"
+    match title="Grim Dawn"
     open-on-workspace ""
 }
 window-rule {
@@ -215,6 +215,7 @@ window-rule {
     match app-id=r#"^blueman-manager$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
     match app-id=r#"^xdg-desktop-portal$"#
+    match app-id=r#"org.quickshell$"#
     open-floating true
 }
 window-rule {
@@ -233,11 +234,6 @@ window-rule {
     default-window-height { fixed 270; }
     default-floating-position x=50 y=50 relative-to="top-left"
 }
-// Open dms windows as floating by default
-window-rule {
-    match app-id=r#"org.quickshell$"#
-    open-floating true
-}
 debug {
     honor-xdg-activation-with-invalid-serial
     // render-drm-device "/dev/dri/renderD128"
@@ -255,7 +251,6 @@ window-rule {
     open-focused false
     default-column-width { fixed 1600; }
     default-window-height { fixed 960; }
-
 }
 
 // Block out notifications from screencasts.

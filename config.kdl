@@ -21,6 +21,8 @@ input {
             variant "altgr-intl"
             options "compose:menu,level3:ralt_switch"
         }
+        repeat-delay 600
+        repeat-rate 25
         numlock
     }
 
@@ -73,6 +75,12 @@ layout {
         active-color "#7fc8ff"
         inactive-color "#505050"
         urgent-color "#9b0000"
+    }
+    tab-indicator {
+        width 7
+        gap 7
+        length total-proportion=0.7
+        place-within-column
     }
     struts {
     }
@@ -144,13 +152,20 @@ animations {
     }
 }
 window-rule {
-    match app-id=r#"nvim-hypr-anywhere"#
+    match app-id=r#"nvim-wl-anywhere"#
     open-floating true
     default-column-width { fixed 1280; }
     default-window-height { fixed 700; }
 }
 window-rule {
-    match title=r#"update"#
+    match app-id=r#"scratch"#
+    open-floating true
+    default-column-width { fixed 1280; }
+    default-window-height { fixed 700; }
+    default-floating-position x=9 y=9 relative-to="bottom"
+}
+window-rule {
+    match app-id=r#"update"#
     open-floating true
     default-column-width { fixed 1280; }
     default-window-height { fixed 700; }

@@ -148,7 +148,8 @@ binds {
     // Mod+Shift+P { power-off-monitors; }
 
     // Projector
-    Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+    // Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+    Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg outputs | grep '^Output' | cut -d'(' -f 2 | cut -d')' -f 1 | vicinae dmenu )"; }
 
     // Dynamic screencast
     Mod+Shift+Print repeat=false { set-dynamic-cast-window; }

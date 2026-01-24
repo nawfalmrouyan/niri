@@ -30,11 +30,12 @@ binds {
     // Mod+Escape allow-inhibiting=false repeat=false { spawn-sh "qs -s noctalia-shell ipc call sessionMenu lockAndSuspend"; }
     Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
     Mod+Shift+G { spawn-sh "footclient -e sesh connect Projects"; }
+    Mod+Ctrl+G { spawn-sh "footclient -e sesh connect PowerShell"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
     Print { spawn "~/.local/bin/dms-screenshot"; }
     Shift+Print { screenshot-window write-to-disk=false; }
     Alt+Print { screenshot-screen write-to-disk=false; }
-    Mod+N { spawn-sh "~/.local/bin/nvim-wl-anywhere.sh --copy-selected --rm-tmp"; }
+    Mod+N { spawn-sh "~/.local/bin/nvim-wl-anywhere.sh --ask-ext --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
     Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
@@ -44,6 +45,7 @@ binds {
     Mod+B repeat=false { spawn-sh "footclient -a btop -e btop"; }
     Mod+Shift+N repeat=false { spawn-sh "footclient -a btop -e nvtop"; }
     Mod+Shift+Y { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e rmpc"; }
+    Mod+Shift+E { spawn "nautilus"; }
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
@@ -64,6 +66,7 @@ binds {
     Mod+G { spawn-sh "nirius focus-or-spawn -a foot /home/opal/.local/bin/stuff"; }
     Mod+R { spawn-sh "nirius focus-or-spawn -a kitty /home/opal/.local/bin/kitty-bookokrat"; }
     Mod+8 { spawn-sh "nirius focus-or-spawn -a toipe /home/opal/.local/bin/foot-toipe"; }
+    Mod+Shift+8 { spawn-sh "nirius focus-or-spawn -a toipe /home/opal/.local/bin/rofi-foot-toipe"; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }

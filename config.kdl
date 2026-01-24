@@ -150,7 +150,7 @@ animations {
 }
 window-rule {
     // Grim Dawn
-    match app-id=r#"steam_app_219990"#
+    match app-id=r#"^steam_app_219990$"#
     open-on-workspace ""
 }
 window-rule {

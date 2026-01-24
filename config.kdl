@@ -89,7 +89,7 @@ layout {
 workspace ""
 workspace ""
 workspace ""
-workspace "scratch"
+workspace ""
 
 layer-rule {
     match namespace="^quickshell$"
@@ -237,7 +237,7 @@ window-rule {
     match app-id=r#"steam"#
     match title=r#"Steam"#
     default-column-display "tabbed"
-    open-on-workspace "scratch"
+    open-on-workspace ""
     block-out-from "screencast"
     open-floating true
     open-focused false

@@ -43,11 +43,13 @@ binds {
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
 
     // scratch apps
+    // https://github.com/gvolpe/niri-scratchpad
     Mod+Backslash { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
     Mod+S { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
 
     // use nirius
+    // https://sr.ht/~tsdh/nirius/
     Mod+Shift+A { spawn-sh "nirius focus-or-spawn -a \"Apache Directory Studio\" ApacheDirectoryStudio"; }
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
     Mod+M { spawn-sh "nirius toggle-mark"; }
@@ -113,12 +115,13 @@ binds {
     Mod+1 { focus-workspace ""; }
     Mod+2 { focus-workspace ""; }
     Mod+3 { focus-workspace ""; }
-    // https://github.com/gvolpe/niri-scratchpad
+    Mod+4 { focus-workspace ""; }
 
     // === Move to Numbered Workspaces ===
     Mod+Ctrl+1 { move-column-to-workspace ""; }
     Mod+Ctrl+2 { move-column-to-workspace ""; }
     Mod+Ctrl+3 { move-column-to-workspace ""; }
+    Mod+Ctrl+4 { move-column-to-workspace ""; }
 
     // === Column Management ===
     Mod+Shift+H  { consume-or-expel-window-left; }

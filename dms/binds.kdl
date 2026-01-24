@@ -21,7 +21,9 @@ binds {
     Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
     Mod+Shift+G { spawn-sh "kitty -1 -e sesh connect stuff"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
-    Print { spawn "~/.config/hypr/scripts/dms-screenshot"; }
+    Print { spawn "~/.local/bin/dms-screenshot"; }
+    Shift+Print { screenshot-window write-to-disk=false; }
+    Alt+Print { screenshot-screen write-to-disk=false; }
     Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
     Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }

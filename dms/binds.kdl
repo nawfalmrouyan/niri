@@ -1,24 +1,13 @@
 binds {
-    // Audio
-    XF86AudioRaiseVolume allow-when-locked=true {
-        spawn-sh "dms ipc call audio increment 3";
-    }
-    XF86AudioLowerVolume allow-when-locked=true {
-        spawn-sh "dms ipc call audio decrement 3";
-    }
-    XF86AudioMute allow-when-locked=true {
-        spawn-sh "dms ipc call audio mute";
-    }
-    XF86AudioMicMute allow-when-locked=true {
-        spawn-sh "dms ipc call audio micmute";
-    }
-
-    XF86MonBrightnessUp allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
-    }
-    XF86MonBrightnessDown allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
-    }  
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "dms ipc call audio increment 3"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "dms ipc call audio decrement 3"; }
+    XF86AudioMute allow-when-locked=true { spawn-sh "dms ipc call audio mute"; }
+    XF86AudioMicMute allow-when-locked=true { spawn-sh "dms ipc call audio micmute"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "increment" "5" ""; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
+    XF86AudioPlay allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioNext allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPrev allow-when-locked=true { spawn-sh "playerctl previous"; }
 
     // === Window Management ===
     Mod+Y repeat=false { toggle-overview; }
@@ -30,12 +19,7 @@ binds {
     Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
     Mod+Shift+T { spawn-sh "kitty -1 -e sesh connect stuff"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
-    // Print { screenshot show-pointer=false; }
-    // Shift+Print { screenshot-window show-pointer=false; }
-    // Ctrl+Print { screenshot-screen show-pointer=false; }
     Print { spawn "~/.config/hypr/scripts/dms-screenshot"; }
-    // Shift+Print { screenshot-window; }
-    // Ctrl+Print { screenshot-screen; }
     Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
     Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }

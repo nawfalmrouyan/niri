@@ -86,9 +86,9 @@ layout {
     }
 }
 
-workspace "work"
-workspace "home"
-workspace "extra"
+workspace ""
+workspace ""
+workspace ""
 workspace "scratch"
 
 layer-rule {
@@ -173,6 +173,11 @@ window-rule {
     default-floating-position x=9 y=9 relative-to="top"
 }
 window-rule {
+    match app-id=r#"outlook-for-linux"#
+    match app-id=r#"Apache Directory Studio"#
+    open-on-workspace ""
+}
+window-rule {
     match title=r#"Peek Preview"#
     open-focused false
 }
@@ -200,7 +205,6 @@ window-rule {
     match app-id=r#"^galculator$"#
     match app-id=r#"^blueman-manager$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^steam$"#
     match app-id=r#"^xdg-desktop-portal$"#
     open-floating true
 }
@@ -229,7 +233,7 @@ debug {
 
 // Override to disable super+tab
 window-rule {
-    match app-id=r#"whatsappweb-nativefier-d40211|telegram"#
+    match app-id=r#"whatsappweb|telegram"#
     match app-id=r#"steam"#
     match title=r#"Steam"#
     default-column-display "tabbed"

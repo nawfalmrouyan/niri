@@ -38,7 +38,6 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
-    Mod+Y { spawn-sh "vicinae vicinae://extensions/tinkerbells/pass/pass"; }
     Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }
     Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
@@ -111,15 +110,15 @@ binds {
     Mod+Ctrl+WheelScrollUp   { move-column-left; }
 
     // === Numbered Workspaces ===
-    Mod+1 { focus-workspace "work"; }
-    Mod+2 { focus-workspace "home"; }
-    Mod+3 { focus-workspace "extra"; }
+    Mod+1 { focus-workspace ""; }
+    Mod+2 { focus-workspace ""; }
+    Mod+3 { focus-workspace ""; }
     // https://github.com/gvolpe/niri-scratchpad
 
     // === Move to Numbered Workspaces ===
-    Mod+Ctrl+1 { move-column-to-workspace "work"; }
-    Mod+Ctrl+2 { move-column-to-workspace "home"; }
-    Mod+Ctrl+3 { move-column-to-workspace "extra"; }
+    Mod+Ctrl+1 { move-column-to-workspace ""; }
+    Mod+Ctrl+2 { move-column-to-workspace ""; }
+    Mod+Ctrl+3 { move-column-to-workspace ""; }
 
     // === Column Management ===
     Mod+Shift+H  { consume-or-expel-window-left; }

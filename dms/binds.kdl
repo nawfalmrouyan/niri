@@ -30,7 +30,7 @@ binds {
     Mod+E { toggle-column-tabbed-display; }
 
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "prime-run" "kitty" "-1"; }
-    Mod+Return { spawn "kitty" "-1" "-e" "sesh" "connect" "Stuff"; }
+    Mod+Return { spawn "kitty" "-1" "-e" "sesh" "connect" "stuff"; }
     Mod+M { spawn "kitty" "-1" "--class" "scratch" "-e" "sesh" "connect" "WORK"; }
     Mod+A { spawn "/opt/outlook-for-linux/outlook-for-linux" "%U"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
@@ -119,12 +119,12 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+Ctrl+F { expand-column-to-available-width; }
+    Mod+Ctrl+F { maximize-column; }
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
     Mod+F       { fullscreen-window; }
-    Mod+Shift+F { maximize-column; }
-    Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
+    Mod+Shift+F { maximize-window-to-edges; }
+    Mod+Z { toggle-windowed-fullscreen; }
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W       { spawn "prime-run" "zen-browser"; }

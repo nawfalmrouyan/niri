@@ -17,6 +17,9 @@ gestures {
 input {
     keyboard {
         xkb {
+            layout "us"
+            variant "altgr-intl"
+            options "compose:menu,level3:ralt_switch"
         }
         numlock
     }
@@ -281,7 +284,7 @@ window-rule {
 }
 debug {
     honor-xdg-activation-with-invalid-serial
-    render-drm-device "/dev/dri/renderD128"
+    // render-drm-device "/dev/dri/renderD128"
 }
 
 // Override to disable super+tab

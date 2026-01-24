@@ -17,14 +17,14 @@ recent-windows {
   }
 
   binds {
-    Alt+Tab         { next-window; }
-    Alt+Shift+Tab   { previous-window; }
-    Alt+grave       { next-window     filter="app-id"; }
-    Alt+Shift+grave { previous-window filter="app-id"; }
+    Alt+O         { next-window; }
+    Alt+Shift+O   { previous-window; }
+    Alt+I       { next-window     filter="app-id"; }
+    Alt+Shift+I { previous-window filter="app-id"; }
 
-    Mod+Tab         { next-window; }
-    Mod+Shift+Tab   { previous-window; }
-    Mod+grave       { next-window     filter="app-id"; }
-    Mod+Shift+grave { previous-window filter="app-id"; }
+    // Mod+Tab         { next-window; }
+    // Mod+Shift+Tab   { previous-window; }
+    // Mod+grave       { next-window     filter="app-id"; }
+    // Mod+Shift+grave { previous-window filter="app-id"; }
   }
 }

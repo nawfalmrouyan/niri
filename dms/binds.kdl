@@ -31,14 +31,15 @@ binds {
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
     Mod+T { spawn "~/.local/bin/toConsumeOrNot.sh"; }
     Mod+Space { spawn-sh "dms ipc call spotlight toggle"; }
+    Mod+B repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e btop"; }
+    Mod+Shift+N repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e nvtop"; }
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
     Mod+S { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
     Mod+O { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
-    Mod+B repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e btop"; }
-    Mod+Shift+N repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e nvtop"; }
+    Mod+7 repeat=false { spawn-sh "~/.local/bin/nscratch -a -id FortiClient -s /opt/forticlient/gui/FortiClient"; }
 
     // use nirius
     // https://sr.ht/~tsdh/nirius/

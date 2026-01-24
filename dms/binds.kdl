@@ -30,10 +30,11 @@ binds {
     Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
     Mod+T { spawn "~/.local/bin/toConsumeOrNot.sh"; }
+    Mod+Space { spawn-sh "dms ipc call spotlight toggle"; }
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
-    Mod+U { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
+    Mod+S { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
     Mod+O { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
     Mod+B repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e btop"; }
@@ -78,7 +79,7 @@ binds {
     // === Workspace Navigation ===
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+Y              { focus-workspace-down; }
+    Mod+U              { focus-workspace-down; }
     Mod+I              { focus-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
     Mod+Ctrl+I         { move-column-to-workspace-up; }
@@ -120,7 +121,7 @@ binds {
     // === Column Management ===
     Mod+Shift+H  { consume-or-expel-window-left; }
     Mod+Shift+L { consume-or-expel-window-right; }
-    Mod+S { expel-window-from-column; }
+    Mod+Y { expel-window-from-column; }
 
     // === Sizing & Layout ===
     // Mod+R { switch-preset-column-width; }

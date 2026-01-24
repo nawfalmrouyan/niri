@@ -2,18 +2,6 @@ config-notification {
     disable-failed
 }
 
-// output "eDP-1" {
-//     // off
-//     mode "1920x1080@60"
-//     position x=0 y=0
-// }
-
-// output "HDMI-A-1" {
-//     mode "1920x1080@60"
-//     position x=0 y=0
-//     focus-at-startup
-// }
-
 gestures {
     hot-corners {
         top-left
@@ -113,7 +101,7 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     QT_QPA_PLATFORMTHEME "gtk3"
     QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-    TERMINAL "kitty"
+    TERMINAL "foot"
     GDK_BACKEND "wayland,x11,*"
     GAMEMODERUNEXEC "env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only"
 }
@@ -166,6 +154,7 @@ window-rule {
 window-rule {
     // Grim Dawn
     match app-id=r#"^steam_app_219990$"#
+    match title=r#"^Grim Dawn$"#
     open-on-workspace ""
 }
 window-rule {

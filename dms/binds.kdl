@@ -19,7 +19,7 @@ binds {
     // Apps
     Mod+Escape allow-inhibiting=false repeat=false { spawn-sh "dms ipc call powermenu toggle"; }
     Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
-    Mod+Shift+G { spawn-sh "kitty -1 -e sesh connect Projects"; }
+    Mod+Shift+G { spawn-sh "footclient -e sesh connect Projects"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
     Print { spawn "~/.local/bin/dms-screenshot"; }
     Shift+Print { screenshot-window write-to-disk=false; }
@@ -30,9 +30,9 @@ binds {
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
     Mod+T { spawn "~/.local/bin/toConsumeOrNot.sh"; }
     Mod+Space { spawn-sh "dms ipc call spotlight toggle"; }
-    Mod+B repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e btop"; }
-    Mod+Shift+N repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e nvtop"; }
-    Mod+Shift+Y { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e rmpc"; }
+    Mod+B repeat=false { spawn-sh "footclient -a btop -e btop"; }
+    Mod+Shift+N repeat=false { spawn-sh "footclient -a btop -e nvtop"; }
+    Mod+Shift+Y { spawn-sh "footclient -a btop -e rmpc"; }
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
@@ -49,7 +49,7 @@ binds {
     Mod+Shift+Apostrophe { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
     Mod+R { spawn-sh "nirius focus-or-spawn -a teams-for-linux /opt/teams-for-linux/teams-for-linux"; }
-    Mod+G { spawn-sh "nirius focus-or-spawn -a kitty /home/opal/.local/bin/stuff"; }
+    Mod+G { spawn-sh "nirius focus-or-spawn -a foot /home/opal/.local/bin/stuff"; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }

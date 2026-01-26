@@ -44,6 +44,7 @@ binds {
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
     Mod+M { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
+    Mod+G { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
     Mod+R { spawn-sh "nirius focus-or-spawn -a teams-for-linux /opt/teams-for-linux/teams-for-linux"; }
 
     // === Focus Navigation ===

@@ -19,14 +19,13 @@ binds {
     // Apps
     Mod+Escape allow-inhibiting=false repeat=false { spawn-sh "dms ipc call powermenu toggle"; }
     Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
-    Mod+Shift+G { spawn-sh "kitty -1 -e sesh connect stuff"; }
+    Mod+Shift+G { spawn-sh "kitty -1 -e sesh connect Projects"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
     Print { spawn "~/.local/bin/dms-screenshot"; }
     Shift+Print { screenshot-window write-to-disk=false; }
     Alt+Print { screenshot-screen write-to-disk=false; }
     Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
-    // Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }
     Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
     Mod+T { spawn "~/.local/bin/toConsumeOrNot.sh"; }
@@ -47,10 +46,10 @@ binds {
     Mod+W { spawn-sh "nirius focus-or-spawn -a zen prime-run zen-browser"; }
     Mod+Z { spawn-sh "nirius focus-or-spawn -a \"Apache Directory Studio\" ApacheDirectoryStudio"; }
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
-    Mod+M { spawn-sh "nirius toggle-mark"; }
+    Mod+Shift+Apostrophe { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
     Mod+R { spawn-sh "nirius focus-or-spawn -a teams-for-linux /opt/teams-for-linux/teams-for-linux"; }
-    Mod+G { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
+    Mod+G { spawn-sh "nirius focus-or-spawn -a kitty /home/opal/.local/bin/stuff"; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }
@@ -156,4 +155,16 @@ binds {
     Mod+Shift+Print repeat=false { set-dynamic-cast-window; }
     Mod+Ctrl+Print repeat=false { set-dynamic-cast-monitor; }
     Mod+Delete repeat=false { clear-dynamic-cast-target; }
+
+    // Toggle the focused window into/out of the sidebar
+    Mod+M { spawn-sh "~/.local/bin/niri-sidebar toggle-window"; }
+
+    // Toggle sidebar visibility (hide/show)
+    Mod+Shift+M { spawn-sh "~/.local/bin/niri-sidebar toggle-visibility"; }
+
+    // Flip the order of the sidebar
+    Mod+Ctrl+M { spawn-sh "~/.local/bin/niri-sidebar flip"; }
+
+    // Force reorder (useful if something gets misaligned manually)
+    Mod+Alt+R { spawn-sh "~/.local/bin/niri-sidebar reorder"; }
 }

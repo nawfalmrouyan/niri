@@ -154,6 +154,7 @@ animations {
 }
 window-rule {
     match app-id=r#"nvim-wl-anywhere"#
+    match app-id=r#"btop"#
     open-floating true
     default-column-width { fixed 1280; }
     default-window-height { fixed 700; }

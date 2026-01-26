@@ -28,14 +28,14 @@ binds {
     Mod+Shift+Escape { toggle-keyboard-shortcuts-inhibit; }
     Mod+E { toggle-column-tabbed-display; }
     Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
-    Mod+T { spawn-sh "kitty -1 -e sesh connect stuff"; }
+    Mod+Shift+T { spawn-sh "kitty -1 -e sesh connect stuff"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
     // Print { screenshot show-pointer=false; }
     // Shift+Print { screenshot-window show-pointer=false; }
     // Ctrl+Print { screenshot-screen show-pointer=false; }
-    Print { screenshot; }
-    Shift+Print { screenshot-window; }
-    Ctrl+Print { screenshot-screen; }
+    Print { spawn "~/.config/hypr/scripts/dms-screenshot"; }
+    // Shift+Print { screenshot-window; }
+    // Ctrl+Print { screenshot-screen; }
     Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
     Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }
@@ -44,9 +44,10 @@ binds {
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
-    Mod+S         { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
-    Mod+Backslash { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
+    Mod+S { spawn-sh "~/.local/bin/nscratch -a -id scratch -s /home/opal/.local/bin/scratchterm"; }
+    Mod+Y { spawn-sh "~/.local/bin/nscratch -a -id whatsappweb-nativefier-d40211 -s /home/opal/.config/WhatsAppWeb-linux-x64/WhatsAppWeb"; }
     Mod+Backspace { spawn-sh "~/.local/bin/nscratch -a -t Steam -s steam"; }
+    Mod+B repeat=false { spawn-sh "kitty -1 --class=btop -o background_opacity=1 -e btop"; }
 
     // use nirius
     // https://sr.ht/~tsdh/nirius/
@@ -55,7 +56,7 @@ binds {
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
     Mod+M { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
-    Mod+Return { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
+    Mod+T { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }
@@ -139,7 +140,7 @@ binds {
     Mod+Ctrl+C  { center-visible-columns; }
     Mod+F       { fullscreen-window; }
     Mod+Shift+F { maximize-window-to-edges; }
-    Mod+B       { toggle-windowed-fullscreen; }
+    Mod+Shift+B { toggle-windowed-fullscreen; }
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 

@@ -142,4 +142,9 @@ binds {
 
     // Projector
     Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+
+    // Dynamic screencast
+    Mod+Shift+Print repeat=false { set-dynamic-cast-window; }
+    Mod+Ctrl+Print repeat=false { set-dynamic-cast-monitor; }
+    Mod+Delete repeat=false { clear-dynamic-cast-target; }
 }

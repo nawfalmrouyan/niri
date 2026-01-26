@@ -106,6 +106,7 @@ overview {
 }
 
 environment {
+    DMS_SCREENSHOT_EDITOR "satty"
     _JAVA_AWT_WM_NONREPARENTING "1"
     XDG_CURRENT_DESKTOP "niri"
     QT_QPA_PLATFORM "wayland"

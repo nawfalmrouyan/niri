@@ -38,7 +38,6 @@ input {
 
 layout {
     gaps 9
-    // empty-workspace-above-first
     background-color "transparent"
     center-focused-column "never"
     preset-column-widths {
@@ -57,9 +56,6 @@ layout {
     border {
         off
         width 0
-        active-color   "#707070"      // Neutral gray
-        inactive-color "#d0d0d0"      // Light gray
-        urgent-color   "#cc4444"      // Softer red
     }
     shadow {
         softness 30
@@ -74,9 +70,6 @@ layout {
     focus-ring {
         on
         width 3
-        active-color "#7fc8ff"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
     }
     tab-indicator {
         width 7
@@ -155,34 +148,35 @@ animations {
     }
 }
 window-rule {
-    match app-id=r#"nvim-wl-anywhere"#
-    match app-id=r#"btop"#
+    match app-id=r#"^nvim-wl-anywhere$"#
+    match app-id=r#"^btop$"#
     open-floating true
     default-column-width { fixed 1280; }
     default-window-height { fixed 720; }
 }
 window-rule {
-    match app-id=r#"scratch"#
+    match app-id=r#"^scratch$"#
     open-floating true
     default-column-width { fixed 1280; }
     default-window-height { fixed 700; }
     default-floating-position x=9 y=9 relative-to="bottom"
 }
 window-rule {
-    match app-id=r#"update"#
+    match app-id=r#"^update$"#
     open-floating true
     default-column-width { fixed 1280; }
     default-window-height { fixed 700; }
     default-floating-position x=9 y=9 relative-to="top"
 }
 window-rule {
-    match app-id=r#"outlook-for-linux"#
-    match app-id=r#"Apache Directory Studio"#
+    match app-id=r#"^outlook-for-linux$"#
+    match app-id=r#"^Apache Directory Studio$"#
     open-on-workspace ""
 }
 window-rule {
-    match title=r#"Peek Preview"#
+    match title=r#"^Peek preview$"#
     open-focused false
+    default-column-width { fixed 946; }
 }
 window-rule {
     geometry-corner-radius 5
@@ -252,7 +246,7 @@ window-rule {
 
 }
 
-// Block out mako notifications from screencasts.
+// Block out notifications from screencasts.
 layer-rule {
     match namespace="^dms.*"
     block-out-from "screencast"

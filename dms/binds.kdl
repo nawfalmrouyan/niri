@@ -13,11 +13,13 @@ binds {
     Mod+Y repeat=false { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Q repeat=false { close-window; }
-    Mod+Escape allow-inhibiting=false repeat=false { spawn-sh "dms ipc call powermenu toggle"; }
-    Mod+Shift+Escape { toggle-keyboard-shortcuts-inhibit; }
     Mod+E { toggle-column-tabbed-display; }
-    Mod+Shift+W { spawn-sh "prime-run zen-browser"; }
-    Mod+Shift+T { spawn-sh "kitty -1 -e sesh connect stuff"; }
+    Mod+Shift+Escape { toggle-keyboard-shortcuts-inhibit; }
+
+    // Apps
+    Mod+Escape allow-inhibiting=false repeat=false { spawn-sh "dms ipc call powermenu toggle"; }
+    Mod+Shift+W { spawn-sh "zen-browser"; }
+    Mod+Shift+G { spawn-sh "kitty -1 -e sesh connect stuff"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
     Print { spawn "~/.config/hypr/scripts/dms-screenshot"; }
     Mod+N { spawn-sh "/home/opal/.local/bin/nvim-wl-anywhere.sh --keystroke-mode --rm-tmp"; }
@@ -25,6 +27,7 @@ binds {
     Mod+SHIFT+Y { spawn "~/.config/hypr/scripts/rofi-beats"; }
     Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
     Mod+X { spawn-sh "dms ipc call bar toggle index 0"; }
+    Mod+T { spawn "~/.local/bin/toConsumeOrNot.sh"; }
 
     // scratch apps
     // https://github.com/gvolpe/niri-scratchpad
@@ -41,7 +44,6 @@ binds {
     Mod+A { spawn-sh "nirius focus-or-spawn -a \"outlook-for-linux\" /opt/outlook-for-linux/outlook-for-linux"; }
     Mod+M { spawn-sh "nirius toggle-mark"; }
     Mod+Apostrophe { spawn-sh "nirius focus-marked"; }
-    Mod+T { spawn-sh "nirius focus-or-spawn -a kitty kitty"; }
     Mod+R { spawn-sh "nirius focus-or-spawn -a teams-for-linux /opt/teams-for-linux/teams-for-linux"; }
 
     // === Focus Navigation ===

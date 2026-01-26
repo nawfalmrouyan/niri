@@ -27,7 +27,6 @@ input {
     }
 
     mouse {}
-    // focus-follows-mouse max-scroll-amount="20%"
     focus-follows-mouse
     workspace-auto-back-and-forth
 }
@@ -108,7 +107,6 @@ environment {
 
 spawn-at-startup "sudo" "setkeycodes" "e057" "240" "e058" "240"
 spawn-at-startup "niriusd"
-spawn-at-startup "~/.local/bin/niri-sidebar" "listen"
 hotkey-overlay {
     skip-at-startup
 }
@@ -242,6 +240,7 @@ debug {
 // Override to disable super+tab
 window-rule {
     match app-id=r#"whatsappweb|telegram|YouTube Music for Desktop"#
+    match app-id="abird-whatsapp"
     match app-id=r#"steam"#
     match title=r#"Steam"#
     match app-id=r#"FortiClient"#

@@ -32,12 +32,9 @@ binds {
     Mod+Shift+G { spawn-sh "footclient -e sesh connect Projects"; }
     Mod+Ctrl+G { spawn-sh "footclient -e sesh connect PowerShell"; }
     Ctrl+Grave { spawn "kitten" "quick-access-terminal"; }
-    // Print { spawn "~/.local/bin/dms-screenshot"; }
-    // Shift+Print { screenshot-window write-to-disk=false; }
-    // Alt+Print { screenshot-screen write-to-disk=false; }
-    Print { spawn-sh "dms ipc call niri screenshot"; }
-    Shift+Print { spawn-sh "dms ipc call niri screenshotWindow"; }
-    Alt+Print { spawn-sh "dms ipc call niri screenshotScreen"; }
+    Print { spawn "~/.local/bin/dms-screenshot"; }
+    Shift+Print { screenshot-window write-to-disk=false; }
+    Alt+Print { screenshot-screen write-to-disk=false; }
     Mod+N { spawn-sh "~/.local/bin/nvim-wl-anywhere.sh --ask-ext --rm-tmp"; }
     Mod+0 {spawn-sh "ROFI_PASS_CONFIG=\"/home/opal/.config/rofi-pass/config\" rofi-pass"; }
     Mod+Semicolon { spawn-sh "vicinae vicinae://extensions/vicinae/clipboard/history"; }
